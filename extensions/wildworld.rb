@@ -18,11 +18,9 @@ class Player
   def initialize
     @job = nil
     @gender = ""
-    @age = 18
-    @name = "Kara"
-    @money = 1000
-    @bladder = 0
-    @arousal = 0    
+    @age = 0
+    @name = ""
+    @money = 1000   
   end
 
   attr_accessor :name
