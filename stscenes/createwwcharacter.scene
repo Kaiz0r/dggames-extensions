@@ -2,7 +2,7 @@
 #tags charactercreation intro
 
 start{
-:set variable age 19
+:set variable age 16
 :set variable name Kara
 :set variable gender female
 Welcome to Wild World. Let's create... you, shall we.
@@ -13,17 +13,28 @@ Just pressing enter will select the top option.
 
 second{
 You are a $age year old $gender called $name.
+:if age over 50 then output You are under 50!
+
+:all age over 18 and age under 24 then output You qualify for young adult!
+:all age == 16 and name == Kara and gender == female then output You are the default.
+:any name is Kara and name is Chloe then output Thats a good name.
+- Finish > end
+- ? age over 18 then Adult Debug > goto adult debug
+- ?all age over 18 and age under 24 then Young Adult area > goto young adult
+- ?any name is Kara and name is Chloe then Good name area > goto good name
+- ?all age == 16 and name == Kara and gender == female then Default person area > goto default area
 - Enter a name > goto name
 - Enter an age > goto age
 - Switch Gender > goto gender switch
-- Finish > end
 }
+
 
 gender switch{
 You are...
 - Male > set variable gender male; goto second
 - Female > set variable gender female; goto second
 }
+
 name{
 What is your name?
 :input name
