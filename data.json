@@ -1,0 +1,7 @@
+{
+    "rb": {"launcher": "ruby", "name": "Ruby"},
+    "py": {"launcher": "python3", "name": "Python"},
+    "js": {"launcher": "node", "name": "Javascript (Node)"},	
+    "stats": {"credits": 0, "wins": {}, "losses": {}},
+    "zmachine": {"directory":"~/.dg_data/zmachine/", "description": "Play ZMachine games through the Jericho library."}
+}

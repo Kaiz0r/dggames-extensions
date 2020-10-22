@@ -1,0 +1,41 @@
+
+#tags charactercreation intro
+
+start{
+:set variable age 19
+:set variable name Kara
+:set variable gender female
+Welcome to Wild World. Let's create... you, shall we.
+To select an option in one of these scenes, enter either; a number, or part of the text.
+Just pressing enter will select the top option.
+- Ok > goto second
+}
+
+second{
+You are a $age year old $gender called $name.
+- Enter a name > goto name
+- Enter an age > goto age
+- Switch Gender > goto gender switch
+- Finish > end
+}
+
+gender switch{
+You are...
+- Male > set variable gender male; goto second
+- Female > set variable gender female; goto second
+}
+name{
+What is your name?
+:input name
+So, your name is $name?
+- Yes > goto second
+- No > goto name
+}
+
+age{
+What is your age?
+:input age
+So, your age is $age?
+- Yes > goto second
+- No > goto age
+}

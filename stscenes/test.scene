@@ -1,0 +1,27 @@
+
+#tags test
+
+start{
+:set variable health 10
+:set variable enemyhealth 10
+You are a person!
+Near you is another person!
+
+- Fight > goto fight
+- Fall asleep > move to dream
+- Run > end
+}
+
+take hit{
+You take a hit!
+}
+
+fight{
+:test
+You're fighting! You have $health health.
+:if random > 0.5 then include take hit
+
+- Punch > goto fight
+- Do nothing > goto fight
+- Run away > end
+}

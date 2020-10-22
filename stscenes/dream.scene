@@ -1,0 +1,9 @@
+
+#tags dream
+
+start{
+You are dreaming.
+
+- Sleep more > goto start
+- Wake up > end
+}
